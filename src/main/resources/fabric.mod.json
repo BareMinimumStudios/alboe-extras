@@ -1,0 +1,53 @@
+{
+	"schemaVersion": 1,
+	"id": "alboe-extras",
+	"version": "${version}",
+	"name": "alboe-extras",
+	"description": "Extra utilities for the ALBOE! modpack.",
+	"authors": [
+		"bibi-reden",
+		"Bare Minimum Studios (BMS)"
+	],
+	"contact": {
+		"sources": "https://github.com/BareMinimumStudios/alboe-extras"
+	},
+	"license": "MIT",
+	"icon": "assets/alboe-extras/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "com.bms.alboe.extras.AlboeExtras",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "com.bms.alboe.extras.AlboeExtrasClient",
+				"adapter": "kotlin"
+			}
+		],
+		"cardinal-components": [
+			"com.bms.alboe.extras.Components"
+		]
+	},
+	"custom": {
+		"cardinal-components": [
+			"alboe-extras:player-data"
+		]
+	},
+	"mixins": [
+		"alboe-extras.mixins.json",
+		{
+			"config": "alboe-extras.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	}
+}

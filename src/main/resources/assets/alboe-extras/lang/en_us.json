@@ -1,0 +1,19 @@
+{
+    "alboe_extras.parties.pvp.enabled": [
+        {"text": "⚔ ", "color": "#F53E3E"},
+        {"text": "You have enabled PVP with other party-members.", "color": "white"}
+    ],
+    "alboe_extras.parties.pvp.disabled": [
+        {"text": "☵ ", "color": "#31D679"},
+        {"text": "You have disabled PVP with other party-members.", "color": "white"}
+    ],
+
+    "text.config.alboe-extras.title": "ALBOE! Extras Settings",
+
+    "text.config.alboe-extras.section.pvpSettings": "PVP Settings",
+
+    "text.config.alboe-extras.option.partyPvp": "Global Party PVP Setting",
+    "text.config.alboe-extras.enum.partyPvpSetting.enabled": "ENABLED",
+    "text.config.alboe-extras.enum.partyPvpSetting.disabled": "DISABLED",
+    "text.config.alboe-extras.enum.partyPvpSetting.set_by_player": "SET_BY_PLAYER"
+}
