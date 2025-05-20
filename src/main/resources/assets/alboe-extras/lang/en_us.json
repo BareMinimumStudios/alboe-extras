@@ -10,10 +10,44 @@
 
     "text.config.alboe-extras.title": "ALBOE! Extras Settings",
 
-    "text.config.alboe-extras.section.pvpSettings": "PVP Settings",
+    "text.config.alboe-extras.section.miscellaneous": "Miscellaneous",
 
-    "text.config.alboe-extras.option.partyPvp": "Global Party PVP Setting",
+    "text.config.alboe-extras.option.partyPvp": [
+        {"text": "⚑ ", "color": "#F53E3E"},
+        {"text": "Global Party PVP", "color": "white"}
+    ],
+
     "text.config.alboe-extras.enum.partyPvpSetting.enabled": "ENABLED",
     "text.config.alboe-extras.enum.partyPvpSetting.disabled": "DISABLED",
-    "text.config.alboe-extras.enum.partyPvpSetting.set_by_player": "SET_BY_PLAYER"
+    "text.config.alboe-extras.enum.partyPvpSetting.set_by_player": "SET_BY_PLAYER",
+
+    "text.config.alboe-extras.category.foodSettings": "Food Settings",
+
+    "text.config.alboe-extras.option.foodSettings.cooldown": [
+        {"text": "⤼ ", "color": "#2AABEC"},
+        {"text": "Cooldown (Ticks)", "color": "white"}
+    ],
+    "text.config.alboe-extras.option.foodSettings.cooldownDifficultyScale": [
+        {"text": "⚖ ", "color": "#F5B244"},
+        {"text": "Cooldown Difficulty Scale", "color": "white"}
+    ],
+    "text.config.alboe-extras.option.foodSettings.forceCooldown": [
+        {"text": "↷ ", "color": "#44a4f5"},
+        {"text": "Force Cooldown", "color": "white"}
+    ],
+    "text.config.alboe-extras.option.foodSettings.foodTime": [
+        {"text": "⏲ ", "color": "#f5b444"},
+        {"text": "Food Time", "color": "white"}
+    ],
+    "text.config.alboe-extras.option.foodSettings.snackTime": [
+        {"text": "⏲ ", "color": "#e5a637"},
+        {"text": "Snack Food Time", "color": "white"}
+    ],
+
+    "text.config.alboe-extras.category.soundSettings": "Sound Settings",
+
+    "text.config.alboe-extras.option.soundSettings.pvpSoundVolume": [
+        {"text": "\uD83D\uDD6A ", "color": "#e6d5b7"},
+        {"text": "PVP Sound Volume", "color": "white"}
+    ]
 }

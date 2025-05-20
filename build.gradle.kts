@@ -33,10 +33,14 @@ repositories {
 	maven("https://maven.quiltmc.org/repository/release/") {
 		name = "Quilt"
 	}
+	maven("https://maven.nucleoid.xyz/") {
+		name = "Nucleoid"
+	}
 	maven("https://maven.txni.dev/releases")
 	maven("https://maven.su5ed.dev/releases")
 	maven("https://raw.githubusercontent.com/Fuzss/modresources/main/maven/")
 	maven("https://maven.ladysnake.org/releases")
+	maven("https://api.nightbloom.cc/maven")
 }
 
 loom {
@@ -76,14 +80,28 @@ dependencies {
 	modImplementation("toni.txnilib:fabric-${properties["minecraft_version"]}:${properties["txnilib_version"]}")
 
 	modImplementation("maven.modrinth:open-parties-and-claims:fabric-${properties["minecraft_version"]}-${properties["opac_version"]}")
+	modImplementation("maven.modrinth:spell-engine:${properties["spell_engine_version"]}+${properties["minecraft_version"]}")
 
 	// Cardinal Components
-    modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-base:${properties["cardinal_components_version"]}")?.let(::include)
-    modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${properties["cardinal_components_version"]}")?.let(::include)
+	modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-base:${properties["cardinal_components_version"]}")?.let(::include)
+	modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${properties["cardinal_components_version"]}")?.let(::include)
+	modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-chunk:${properties["cardinal_components_version"]}")?.let(::include)
+	modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-level:${properties["cardinal_components_version"]}")?.let(::include)
+
+	modImplementation("maven.modrinth:playerex-directors-cut:${properties["playerex_version"]}")
+
+	modImplementation("io.wispforest:endec:${properties["endec_version"]}")?.let(::include)
+	modImplementation("io.wispforest.endec:gson:${properties["endec_gson_version"]}")?.let(::include)
+	modImplementation("io.wispforest.endec:netty:${properties["endec_netty_version"]}")?.let(::include)
+
+	modImplementation("eu.pb4:placeholder-api:${properties["placeholder_api_version"]}")?.let(::include)
+	implementation("net.objecthunter:exp4j:${properties["exp4j_version"]}")?.let(::include)
 
 	modImplementation(include("com.github.Chocohead:Fabric-ASM:v2.3") {
 		exclude(group = "net.fabricmc", module = "fabric-loader")
 	})
+
+	modImplementation("nightbloom:simplerpc:YJuUxw49")
 
 	annotationProcessor("io.github.llamalad7:mixinextras-fabric:${properties["mixinextras_version"]}")?.let {
 		implementation(it)

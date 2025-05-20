@@ -1,0 +1,10 @@
+{
+    "pvp_enabled": {
+        "subtitle": "sound.alboe-extras.pvp_enabled",
+        "sounds": [ "alboe-extras:pvp_enabled" ]
+    },
+    "pvp_disabled": {
+        "subtitle": "sound.alboe-extras.pvp_disabled",
+        "sounds": [ "alboe-extras:pvp_disabled" ]
+    }
+}
