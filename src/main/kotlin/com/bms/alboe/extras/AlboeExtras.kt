@@ -6,7 +6,6 @@ import com.bms.alboe.extras.networking.AlboeExtrasNetworking
 import com.bms.alboe.extras.networking.ClientPartyMembers
 import com.bms.alboe.extras.networking.events.NetworkingEventPvp
 import com.bms.alboe.extras.networking.ServerPartyMembers
-import io.wispforest.owo.network.serialization.PacketBufSerializer
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents
@@ -96,7 +95,7 @@ object AlboeExtras : ModInitializer {
 
 
 					if (party != null) {
-						AlboeExtrasNetworking.EVENTS.serverHandle(party.onlineMemberStream.toList()).send(NetworkingEventPvp(data.isPartyPvpEnabled))
+						AlboeExtrasNetworking.EVENTS.serverHandle(party.onlineMemberStream.toList()).send(NetworkingEventPvp(player.gameProfile.name, data.isPartyPvpEnabled))
 					}
 
 					1

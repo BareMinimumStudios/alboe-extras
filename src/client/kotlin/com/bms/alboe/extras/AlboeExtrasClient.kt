@@ -41,9 +41,9 @@ object AlboeExtrasClient : ClientModInitializer {
 			ClientTickEvents.END_CLIENT_TICK.register { PartyMemberHud.tick(minecraft) }
 		}
 
-		AlboeExtrasNetworking.EVENTS.registerClientbound(NetworkingEventPvp::class.java) { (enabled), access ->
+		AlboeExtrasNetworking.EVENTS.registerClientbound(NetworkingEventPvp::class.java) { (playerName, enabled), access ->
 			// message out
-			(if (enabled) MessageDispatcher.partyPvpEnabledPlayer(access.player()) else MessageDispatcher.partyPvpDisabledPlayer(access.player())).sendLocal(access.player())
+			(if (enabled) MessageDispatcher.partyPvpEnabledPlayer(playerName) else MessageDispatcher.partyPvpDisabledPlayer(playerName)).sendLocal(access.player())
 			access.player().playNotifySound(if (enabled) AlboeExtrasSounds.PVP_ENABLED else AlboeExtrasSounds.PVP_DISABLED, SoundSource.NEUTRAL, AlboeExtras.CONFIG.soundSettings.pvpSoundVolume.toFloat(), 1F)
 		}
 	}
